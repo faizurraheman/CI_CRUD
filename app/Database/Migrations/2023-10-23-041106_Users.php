@@ -22,6 +22,10 @@ class Users extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '3',
             ],
+            'image'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('users');

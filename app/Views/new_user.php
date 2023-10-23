@@ -1,6 +1,6 @@
 <?= $this->extend('home') ?>
 <?= $this->section('content') ?>
-<form action="/users" method="post">
+<form action="/users" method="post" enctype="multipart/form-data">
 	<h3>Create New User</h3><br>
 	<div class="mb-3 row col-6">
 	<?php csrf_field()  ?>
@@ -10,6 +10,10 @@
 	<div class="mb-3 row col-6">
 		<label class="form-label">Age</label>
 		<input type="number" class="form-control"name="age" required>
+	</div>
+	<div class="mb-3 row col-6">
+		<label class="form-label">Image</label>
+		<input type="file" class="form-control"name="image" required>
 	</div>
 	<button type="submit" class="btn btn-primary">Submit</button>
 </form>

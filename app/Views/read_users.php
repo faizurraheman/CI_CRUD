@@ -7,6 +7,7 @@
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Age</th>
+      <th scope="col">Image</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -17,6 +18,7 @@
       <td><?= $user->id ?></td>
       <td><?= $user->name ?></td>
       <td><?= $user->age ?></td>
+      <td><img src="uploads/<?= $user->image ?>" alt="" srcset="" style="width: 40px;"></td>
       <td>
         <a href="<?= base_url('/users/'.$user->id.'/edit') ?>" class="btn btn-primary">Edit</a>
       </td>
